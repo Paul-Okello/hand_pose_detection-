@@ -4,6 +4,7 @@ import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
 import "./App.css";
 import { drawHand } from "./util";
+import { Typography } from "@material-ui/core";
 
 const App = () => {
   const webcamRef = useRef(null);
@@ -49,6 +50,9 @@ const App = () => {
   runHandPose();
   return (
     <div className="App">
+      <Typography variant="h3" color="textSecondary">
+        Place Your hand in front of the camera
+      </Typography>
       <header className="App-header">
         <Webcam
           ref={webcamRef}
