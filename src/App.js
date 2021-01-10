@@ -7,6 +7,13 @@ import "./App.css";
 const App = () => {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+
+  const runHandPose = async () => {
+    const net = await handpose.load();
+    console.log("Handpose model loaded");
+  };
+
+  runHandPose();
   return (
     <div className="App">
       <header className="App-header">
